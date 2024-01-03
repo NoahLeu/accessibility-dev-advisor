@@ -1,0 +1,144 @@
+{
+	"categories": [
+		{
+			"name": "App Functionalities to be considered",
+			"steps": [
+				{
+					"question": "Does the app allow the user to type in text?",
+					"answers": [
+						{
+							"answer": "Yes",
+							"relatedAspects": ["aspect_1", "aspect_3"],
+							"canAddAspects": true
+						},
+						{
+							"answer": "No"
+						}
+					]
+				},
+				{
+					"question": "Does the app have a search bar?",
+					"answers": [
+						{
+							"answer": "Yes",
+							"relatedAspects": ["aspect_2", "aspect_4"],
+							"canAddAspects": true
+						},
+						{
+							"answer": "No"
+						}
+					]
+				},
+				{
+					"question": "Does the app have user settings?",
+					"answers": [
+						{
+							"answer": "Yes",
+							"relatedAspects": ["aspect_1", "aspect_3"],
+							"canAddAspects": true
+						},
+						{
+							"answer": "No"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Disabilities to be considered",
+			"steps": [
+				{
+					"question": "Could the user have color blindness?",
+					"answers": [
+						{
+							"answer": "Yes",
+							"relatedAspects": ["aspect_2", "aspect_3"],
+							"canAddAspects": false
+						},
+						{
+							"answer": "No"
+						}
+					]
+				},
+				{
+					"question": "Could the user have low vision?",
+					"answers": [
+						{
+							"answer": "Yes",
+							"relatedAspects": ["aspect_3", "aspect_4"],
+							"canAddAspects": false
+						},
+						{
+							"answer": "No"
+						}
+					]
+				},
+				{
+					"question": "Could the user have a learning disability?",
+					"answers": [
+						{
+							"answer": "Yes",
+							"relatedAspects": ["aspect_1", "aspect_2"],
+							"canAddAspects": false
+						},
+						{
+							"answer": "No"
+						}
+					]
+				},
+				{
+					"question": "Could the user have a hearing impairment?",
+					"answers": [
+						{
+							"answer": "Yes",
+							"relatedAspects": ["aspect_1", "aspect_2"],
+							"canAddAspects": false
+						},
+						{
+							"answer": "No"
+						}
+					]
+				},
+				{
+					"question": "Could the user have a motor impairment (e.g. arthritis, Parkinson's disease, etc.)?",
+					"answers": [
+						{
+							"answer": "Yes",
+							"relatedAspects": ["aspect_2", "aspect_4"],
+							"canAddAspects": false
+						},
+						{
+							"answer": "No"
+						}
+					]
+				},
+				{
+					"question": "Could the user have a speech impairment?",
+					"answers": [
+						{
+							"answer": "Yes",
+							"relatedAspects": ["aspect_2", "aspect_3"],
+							"canAddAspects": false
+						},
+						{
+							"answer": "No"
+						}
+					]
+				},
+				{
+					"question": "Could the user have a cognitive impairment?",
+					"answers": [
+						{
+							"answer": "Yes",
+							"relatedAspects": ["aspect_1", "aspect_3"],
+							"canAddAspects": false
+						},
+						{
+							"answer": "No"
+						}
+					]
+				}
+			]
+		}
+	]
+}
