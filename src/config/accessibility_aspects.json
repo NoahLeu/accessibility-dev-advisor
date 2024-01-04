@@ -1,22 +1,26 @@
-{
-	"aspect_1": {
+[
+	{
+		"id": "aspect_1",
 		"name": "Aspect 1",
 		"description": "This is the first aspect",
 		"sources": ["https://google.com", "https://apple.com"]
 	},
-	"aspect_2": {
+	{
+		"id": "aspect_2",
 		"name": "Aspect 2",
 		"description": "This is the second aspect",
 		"sources": ["https://google.com", "https://apple.com"]
 	},
-	"aspect_3": {
+	{
+		"id": "aspect_3",
 		"name": "Aspect 3",
 		"description": "This is the third aspect",
 		"sources": ["https://google.com", "https://apple.com"]
 	},
-	"aspect_4": {
+	{
+		"id": "aspect_4",
 		"name": "Aspect 4",
 		"description": "This is the fourth aspect",
 		"sources": ["https://google.com", "https://apple.com"]
 	}
-}
+]

@@ -1,5 +1,5 @@
 import analysisData from "../config/analysis.json";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import analysisTemplate from "../config/analysis.json";
 import { AnalysisContext } from "../context/analysisContext";
@@ -28,50 +28,43 @@ const Analysis = () => {
 	const [activeStep, setActiveStep] = useState(0);
 	const navigate = useNavigate();
 
-	const { analysis, setAnalysis, addToRelationCount } =
+	const { analysis, setAnalysis, initializeAnalysis, addToRelationCount } =
 		useContext(AnalysisContext) || {};
 
 	const handleNextStep = () => {
 		if (activeStep < analysisData.categories[activeCategory].steps.length - 1) {
 			setActiveStep(activeStep + 1);
 		} else {
-			// if (activeCategory === analysisData.categories.length - 1) {
-			// 	console.log("finish analysis");
-
-			// 	return;
-			// }
-
 			setActiveCategory(activeCategory + 1);
 			setActiveStep(0);
 		}
 	};
 
 	const handlePreviousStep = () => {
-		if (activeStep > 0) {
-			setActiveStep(activeStep - 1);
-		} else {
-			setActiveCategory(activeCategory - 1);
-			setActiveStep(
-				analysisData.categories[activeCategory - 1].steps.length - 1
-			);
+		let nextStep = activeStep - 1;
+		let nextCategory = activeCategory;
+
+		if (nextStep < 0 && nextCategory > 0) {
+			nextCategory--;
+			nextStep = analysisData.categories[nextCategory].steps.length - 1;
 		}
+
+		// set to previous relation count
+		// need history of relation counts for this
+
+		setActiveCategory(nextCategory);
+		setActiveStep(nextStep);
 	};
 
 	const handleSelectAnswer = (index: number) => {
-		console.log(index);
-
 		if (
 			analysisData.categories[activeCategory].steps[activeStep].answers[index]
 				.relatedAspects !== undefined &&
-			analysisData.categories[activeCategory].steps[activeStep].answers[index]
-				.canAddAspects !== undefined &&
 			addToRelationCount !== undefined
 		) {
 			addToRelationCount(
 				analysisData.categories[activeCategory].steps[activeStep].answers[index]
-					.relatedAspects!,
-				analysisData.categories[activeCategory].steps[activeStep].answers[index]
-					.canAddAspects!
+					.relatedAspects!
 			);
 		}
 
@@ -92,9 +85,13 @@ const Analysis = () => {
 		navigate("/result");
 	};
 
+	useEffect(() => {
+		initializeAnalysis && !analysis?.started && initializeAnalysis();
+	}, [initializeAnalysis, analysis?.started]);
+
 	return (
 		<div className="bg-gray flex flex-col justify-center items-center w-screen h-screen">
-			<div className="flex flex-col w-1/2 max-w-96 mx-auto mb-10">
+			<div className="flex flex-col w-full max-w-96 mx-auto mb-10">
 				<p>
 					Step: {getCurrentStepInTotal(activeCategory, activeStep) + 1} /{" "}
 					{getTotalSteps() + 1}
@@ -129,7 +126,7 @@ const Analysis = () => {
 					<h2 className="text-lg font-bold">
 						{analysisData.categories[activeCategory].steps[activeStep].question}
 					</h2>
-					<div className="flex flex-col min-w-96 mt-10 gap-y-6">
+					<div className="flex flex-col max-w-96 w-full mt-10 gap-y-6">
 						{/* menu showing the selected questions and its possible answers */}
 						{analysisData.categories[activeCategory].steps[
 							activeStep

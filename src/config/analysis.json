@@ -8,8 +8,7 @@
 					"answers": [
 						{
 							"answer": "Yes",
-							"relatedAspects": ["aspect_1", "aspect_3"],
-							"canAddAspects": true
+							"relatedAspects": ["aspect_1", "aspect_3"]
 						},
 						{
 							"answer": "No"
@@ -21,8 +20,7 @@
 					"answers": [
 						{
 							"answer": "Yes",
-							"relatedAspects": ["aspect_2", "aspect_4"],
-							"canAddAspects": true
+							"relatedAspects": ["aspect_2", "aspect_4"]
 						},
 						{
 							"answer": "No"
@@ -34,8 +32,7 @@
 					"answers": [
 						{
 							"answer": "Yes",
-							"relatedAspects": ["aspect_1", "aspect_3"],
-							"canAddAspects": true
+							"relatedAspects": ["aspect_1", "aspect_3"]
 						},
 						{
 							"answer": "No"
@@ -52,8 +49,7 @@
 					"answers": [
 						{
 							"answer": "Yes",
-							"relatedAspects": ["aspect_2", "aspect_3"],
-							"canAddAspects": false
+							"relatedAspects": ["aspect_2", "aspect_3"]
 						},
 						{
 							"answer": "No"
@@ -65,8 +61,7 @@
 					"answers": [
 						{
 							"answer": "Yes",
-							"relatedAspects": ["aspect_3", "aspect_4"],
-							"canAddAspects": false
+							"relatedAspects": ["aspect_3", "aspect_4"]
 						},
 						{
 							"answer": "No"
@@ -78,8 +73,7 @@
 					"answers": [
 						{
 							"answer": "Yes",
-							"relatedAspects": ["aspect_1", "aspect_2"],
-							"canAddAspects": false
+							"relatedAspects": ["aspect_1", "aspect_2"]
 						},
 						{
 							"answer": "No"
@@ -91,8 +85,7 @@
 					"answers": [
 						{
 							"answer": "Yes",
-							"relatedAspects": ["aspect_1", "aspect_2"],
-							"canAddAspects": false
+							"relatedAspects": ["aspect_1", "aspect_2"]
 						},
 						{
 							"answer": "No"
@@ -104,8 +97,7 @@
 					"answers": [
 						{
 							"answer": "Yes",
-							"relatedAspects": ["aspect_2", "aspect_4"],
-							"canAddAspects": false
+							"relatedAspects": ["aspect_2", "aspect_4"]
 						},
 						{
 							"answer": "No"
@@ -117,8 +109,7 @@
 					"answers": [
 						{
 							"answer": "Yes",
-							"relatedAspects": ["aspect_2", "aspect_3"],
-							"canAddAspects": false
+							"relatedAspects": ["aspect_2", "aspect_3"]
 						},
 						{
 							"answer": "No"
@@ -130,8 +121,7 @@
 					"answers": [
 						{
 							"answer": "Yes",
-							"relatedAspects": ["aspect_1", "aspect_3"],
-							"canAddAspects": false
+							"relatedAspects": ["aspect_1", "aspect_3"]
 						},
 						{
 							"answer": "No"

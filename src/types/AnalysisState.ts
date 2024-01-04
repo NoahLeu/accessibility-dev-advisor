@@ -1,4 +1,5 @@
 export type AnalysisState = {
+	started: boolean;
 	finished: boolean;
 	aspects: Aspect[];
 };
