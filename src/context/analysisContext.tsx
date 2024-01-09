@@ -1,6 +1,8 @@
 import * as React from "react";
 import { AnalysisState } from "../types/AnalysisState";
 
+import allAccessibilityAspects from "../config/accessibility_aspects.json";
+
 export const AnalysisContext = React.createContext<{
 	analysis: AnalysisState;
 	setAnalysis: React.Dispatch<React.SetStateAction<AnalysisState>>;
@@ -58,24 +60,10 @@ const AnalysisProvider: React.FC<{ children: React.ReactNode }> = ({
 		setAnalysis({
 			started: true,
 			finished: false,
-			aspects: [
-				{
-					id: "aspect_1",
-					relationCount: 0,
-				},
-				{
-					id: "aspect_2",
-					relationCount: 0,
-				},
-				{
-					id: "aspect_3",
-					relationCount: 0,
-				},
-				{
-					id: "aspect_4",
-					relationCount: 0,
-				},
-			],
+			aspects: allAccessibilityAspects.map((aspect) => ({
+				id: aspect.id,
+				relationCount: 0,
+			})),
 		});
 	};
 
