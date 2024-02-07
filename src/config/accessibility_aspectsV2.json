@@ -1,0 +1,859 @@
+[
+	{
+		"id": "alternative_content",
+		"name": "Alternative Content",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": ["https://www.w3.org/TR/WCAG22/#text-alternatives"],
+			"uaag": [
+				"https://www.w3.org/TR/2015/NOTE-UAAG20-20151215/#gl-access-alternative-content",
+				"https://www.w3.org/TR/2015/NOTE-UAAG20-Reference-20151215/#sc_413"
+			],
+			"atag": ["https://www.w3.org/TR/ATAG20/#gl_a21"],
+			"apple": [
+				"https://developer.apple.com/design/human-interface-guidelines/accessibility#VoiceOver"
+			]
+		}
+	},
+	{
+		"id": "time_based_media",
+		"name": "Time-based Media (Videos, Audio)",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": [
+				"https://www.w3.org/TR/WCAG22/#time-based-media",
+				"https://www.w3.org/TR/WCAG22/#audio-control",
+				"https://www.w3.org/TR/WCAG22/#low-or-no-background-audio"
+			],
+			"uaag": [
+				"https://www.w3.org/TR/2015/NOTE-UAAG20-20151215/#gl-speech-config",
+				"https://www.w3.org/TR/2015/NOTE-UAAG20-20151215/#gl-control-inaccessible-content"
+			],
+			"atag": ["https://www.w3.org/TR/2015/REC-ATAG20-20150924/#sc_a212"],
+			"apple": [
+				"https://developer.apple.com/design/human-interface-guidelines/playing-audio",
+				"https://developer.apple.com/design/human-interface-guidelines/accessibility#VoiceOver",
+				"https://developer.apple.com/design/human-interface-guidelines/playing-video",
+				"https://developer.apple.com/design/human-interface-guidelines/live-viewing-apps#Best-practices"
+			]
+		}
+	},
+	{
+		"id": "speech_output",
+		"name": "Speech Output",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": [],
+			"uaag": [
+				"https://www.w3.org/TR/2015/NOTE-UAAG20-20151215/#gl-speech-config"
+			],
+			"atag": [],
+			"apple": []
+		}
+	},
+	{
+		"id": "adaptable_views",
+		"name": "Adaptable Views",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": [
+				"https://www.w3.org/TR/WCAG22/#adaptable",
+				"https://www.w3.org/TR/WCAG22/#label-in-name",
+				"https://www.w3.org/TR/WCAG22/#reflow"
+			],
+			"uaag": [],
+			"atag": [],
+			"apple": []
+		}
+	},
+	{
+		"id": "contrast_and_color",
+		"name": "Contrast and Color",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": [
+				"https://www.w3.org/TR/WCAG22/#use-of-color",
+				"https://www.w3.org/TR/WCAG22/#contrast-minimum",
+				"https://www.w3.org/TR/WCAG22/#contrast-enhanced",
+				"https://www.w3.org/TR/WCAG22/#non-text-contrast"
+			],
+			"uaag": [],
+			"atag": [],
+			"apple": [
+				"https://developer.apple.com/design/human-interface-guidelines/accessibility#Color-and-effects",
+				"https://developer.apple.com/design/human-interface-guidelines/color#Inclusive-color",
+				"https://developer.apple.com/design/human-interface-guidelines/color#Inclusive-color"
+			]
+		}
+	},
+	{
+		"id": "personalization",
+		"name": "Personalization",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": [
+				"https://www.w3.org/TR/WCAG22/#resize-text",
+				"https://www.w3.org/TR/WCAG22/#visual-presentation",
+				"https://www.w3.org/TR/WCAG22/#text-spacing"
+			],
+			"uaag": [
+				"https://www.w3.org/TR/2015/NOTE-UAAG20-20151215/#gl-interaction-highlight",
+				"https://www.w3.org/TR/2015/NOTE-UAAG20-20151215/#gl-text-config",
+				"https://www.w3.org/TR/2015/NOTE-UAAG20-20151215/#gl-store-prefs"
+			],
+			"atag": [
+				"https://www.w3.org/TR/2015/REC-ATAG20-20150924/Overview.html#gl_a36"
+			],
+			"apple": [
+				"https://developer.apple.com/design/human-interface-guidelines/settings"
+			]
+		}
+	},
+	{
+		"id": "text",
+		"name": "Text",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": [
+				"https://www.w3.org/TR/WCAG22/#images-of-text",
+				"https://www.w3.org/TR/WCAG22/#images-of-text-no-exception"
+			],
+			"uaag": [],
+			"atag": [],
+			"apple": [
+				"https://developer.apple.com/design/human-interface-guidelines/accessibility#Text-display",
+				"https://developer.apple.com/design/human-interface-guidelines/right-to-left",
+				"https://developer.apple.com/design/human-interface-guidelines/writing"
+			]
+		}
+	},
+	{
+		"id": "audio",
+		"name": "Audio",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": [
+				"https://www.w3.org/TR/WCAG22/#audio-control",
+				"https://www.w3.org/TR/WCAG22/#low-or-no-background-audio"
+			],
+			"uaag": [],
+			"atag": [],
+			"apple": [
+				"https://developer.apple.com/design/human-interface-guidelines/accessibility#Text-display",
+				"https://developer.apple.com/design/human-interface-guidelines/right-to-left",
+				"https://developer.apple.com/design/human-interface-guidelines/writing"
+			]
+		}
+	},
+	{
+		"id": "hover_focus_modals",
+		"name": "Content on Hover or Focus, and Modals",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": ["https://www.w3.org/TR/WCAG22/#content-on-hover-or-focus"],
+			"uaag": [],
+			"atag": [],
+			"apple": [
+				"https://developer.apple.com/design/human-interface-guidelines/modality#Best-practices",
+				"https://developer.apple.com/design/human-interface-guidelines/pop-up-buttons#Best-practices"
+			]
+		}
+	},
+	{
+		"id": "keyboard_usability",
+		"name": "Keyboard Usability",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": ["https://www.w3.org/TR/WCAG22/#keyboard-accessible"],
+			"uaag": [
+				"https://www.w3.org/TR/2015/NOTE-UAAG20-20151215/#gl-keyboard-access"
+			],
+			"atag": [
+				"https://www.w3.org/TR/2015/REC-ATAG20-20150924/Overview.html#gl_a31"
+			],
+			"apple": []
+		}
+	},
+	{
+		"id": "touch_gestures",
+		"name": "Touch Gestures",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": [],
+			"uaag": [],
+			"atag": [],
+			"apple": [
+				"https://developer.apple.com/design/human-interface-guidelines/accessibility#Gestures",
+				"https://developer.apple.com/design/human-interface-guidelines/gestures#Best-practices"
+			]
+		}
+	},
+	{
+		"id": "virtual_keyboard",
+		"name": "Virtual Keyboard",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": [],
+			"uaag": [],
+			"atag": [],
+			"apple": [
+				"https://developer.apple.com/design/human-interface-guidelines/virtual-keyboards#Best-practices"
+			]
+		}
+	},
+	{
+		"id": "timed interactions",
+		"name": "Timed Interactions",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": ["https://www.w3.org/TR/WCAG22/#enough-time"],
+			"uaag": [
+				"https://www.w3.org/TR/2015/NOTE-UAAG20-20151215/#gl-time-independent"
+			],
+			"atag": [
+				"https://www.w3.org/TR/2015/REC-ATAG20-20150924/Overview.html#gl_a32"
+			],
+			"apple": []
+		}
+	},
+	{
+		"id": "interruptions",
+		"name": "Interruptions",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": ["https://www.w3.org/TR/WCAG22/#interruptions"],
+			"uaag": [],
+			"atag": [],
+			"apple": []
+		}
+	},
+	{
+		"id": "app_onboarding",
+		"name": "App Onboarding",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": [],
+			"uaag": [],
+			"atag": [],
+			"apple": [
+				"https://developer.apple.com/design/human-interface-guidelines/inclusion#Welcoming-language",
+				"https://developer.apple.com/design/human-interface-guidelines/launching",
+				"https://developer.apple.com/design/human-interface-guidelines/onboarding"
+			]
+		}
+	},
+	{
+		"id": "motion",
+		"name": "Motion",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": [
+				"https://www.w3.org/TR/WCAG22/#no-timing",
+				"https://www.w3.org/TR/WCAG22/#seizures-and-physical-reactions"
+			],
+			"uaag": [],
+			"atag": [],
+			"apple": [
+				"https://developer.apple.com/design/human-interface-guidelines/accessibility#Motion",
+				"https://developer.apple.com/design/human-interface-guidelines/motion#Best-practices",
+				"https://developer.apple.com/design/human-interface-guidelines/accessibility#Motion"
+			]
+		}
+	},
+	{
+		"id": "navigation",
+		"name": "Navigation",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": ["https://www.w3.org/TR/WCAG22/#navigable"],
+			"uaag": [
+				"https://www.w3.org/TR/2015/NOTE-UAAG20-20151215/#gl-sequential-navigation",
+				"https://www.w3.org/TR/2015/NOTE-UAAG20-20151215/#gl-nav-structure"
+			],
+			"atag": [
+				"https://www.w3.org/TR/2015/REC-ATAG20-20150924/Overview.html#gl_a34"
+			],
+			"apple": [
+				"https://developer.apple.com/design/human-interface-guidelines/accessibility#Navigation",
+				"https://developer.apple.com/design/human-interface-guidelines/inclusion#Welcoming-language",
+				"https://developer.apple.com/design/human-interface-guidelines/menus#Labels"
+			]
+		}
+	},
+	{
+		"id": "element_interaction",
+		"name": "Element Interaction",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": [],
+			"uaag": [
+				"https://www.w3.org/TR/2015/NOTE-UAAG20-20151215/#gl-direct-navigation-and-activation"
+			],
+			"atag": [],
+			"apple": []
+		}
+	},
+	{
+		"id": "user_orientation",
+		"name": "User Orientation",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": [
+				"https://www.w3.org/TR/WCAG22/#focus-visible",
+				"https://www.w3.org/TR/WCAG22/#location",
+				"https://www.w3.org/TR/WCAG22/#focus-not-obscured-minimum",
+				"https://www.w3.org/TR/WCAG22/#focus-not-obscured-enhanced",
+				"https://www.w3.org/TR/WCAG22/#focus-appearance"
+			],
+			"uaag": [
+				"https://www.w3.org/TR/2015/NOTE-UAAG20-20151215/#gl-interaction-highlight",
+				"https://www.w3.org/TR/2015/NOTE-UAAG20-20151215/#gl-viewport-orient"
+			],
+			"atag": [],
+			"apple": [
+				"https://developer.apple.com/design/human-interface-guidelines/sidebars#Best-practices"
+			]
+		}
+	},
+	{
+		"id": "input_devices",
+		"name": "Input Devices",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": [],
+			"uaag": [
+				"https://www.w3.org/TR/2015/NOTE-UAAG20-20151215/#gl-other-devices"
+			],
+			"atag": [],
+			"apple": [
+				"https://developer.apple.com/design/human-interface-guidelines/game-controllers",
+				"https://developer.apple.com/design/human-interface-guidelines/pointing-devices",
+				"https://developer.apple.com/design/human-interface-guidelines/apple-pencil-and-scribble",
+				"https://developer.apple.com/design/human-interface-guidelines/carplay"
+			]
+		}
+	},
+	{
+		"id": "input_modalities",
+		"name": "Input Modalities",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": ["https://www.w3.org/TR/WCAG22/#input-modalities"],
+			"uaag": [],
+			"atag": [],
+			"apple": []
+		}
+	},
+	{
+		"id": "click_targets",
+		"name": "Click Targets (Buttons, Links, etc.)",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": ["https://www.w3.org/TR/WCAG22/#target-size-enhanced"],
+			"uaag": [],
+			"atag": [],
+			"apple": [
+				"https://developer.apple.com/design/human-interface-guidelines/accessibility#Buttons-and-controls",
+				"https://developer.apple.com/design/human-interface-guidelines/buttons#Best-practices"
+			]
+		}
+	},
+	{
+		"id": "predictable_behavior",
+		"name": "Predictable Behavior",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": ["https://www.w3.org/TR/WCAG22/#predictable"],
+			"uaag": [
+				"https://www.w3.org/TR/2015/NOTE-UAAG20-20151215/#gl-predictable-operation"
+			],
+			"atag": [],
+			"apple": []
+		}
+	},
+	{
+		"id": "user_help",
+		"name": "User Help",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": ["https://www.w3.org/TR/WCAG22/#consistent-help"],
+			"uaag": [],
+			"atag": [],
+			"apple": [
+				"https://developer.apple.com/design/human-interface-guidelines/offering-help"
+			]
+		}
+	},
+	{
+		"id": "input_assistance",
+		"name": "Input Assistance",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": ["https://www.w3.org/TR/WCAG22/#input-assistance"],
+			"uaag": [
+				"https://www.w3.org/TR/2015/NOTE-UAAG20-20151215/#gl-missing-alt",
+				"https://www.w3.org/TR/2015/NOTE-UAAG20-20151215/#gl-avoid-mistakes"
+			],
+			"atag": [
+				"https://www.w3.org/TR/2015/REC-ATAG20-20150924/Overview.html#gl_a41",
+				"https://www.w3.org/TR/2015/REC-ATAG20-20150924/#sc_b232",
+				"https://www.w3.org/TR/2015/REC-ATAG20-20150924/Overview.html#gl_b32"
+			],
+			"apple": [
+				"https://developer.apple.com/design/human-interface-guidelines/undo-and-redo",
+				"https://developer.apple.com/design/human-interface-guidelines/accessibility#User-input",
+				"https://developer.apple.com/design/human-interface-guidelines/drag-and-drop#Best-practices",
+				"https://developer.apple.com/design/human-interface-guidelines/text-fields#Best-practices",
+				"https://developer.apple.com/design/human-interface-guidelines/keyboards#Custom-keyboard-shortcuts"
+			]
+		}
+	},
+	{
+		"id": "authentication_session_management",
+		"name": "authentication and session management",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": [
+				"https://www.w3.org/TR/WCAG22/#re-authenticating",
+				"https://www.w3.org/TR/WCAG22/#timeouts",
+				"https://www.w3.org/TR/WCAG22/#accessible-authentication-minimum",
+				"https://www.w3.org/TR/WCAG22/#accessible-authentication-enhanced"
+			],
+			"uaag": [],
+			"atag": [],
+			"apple": []
+		}
+	},
+	{
+		"id": "compatibility",
+		"name": "Platform Compatibility",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": ["https://www.w3.org/TR/WCAG22/#compatible"],
+			"uaag": [],
+			"atag": [],
+			"apple": []
+		}
+	},
+	{
+		"id": "conventions",
+		"name": "Meet Known Conventions",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": [],
+			"uaag": [
+				"https://www.w3.org/TR/2015/NOTE-UAAG20-20151215/#gl-obs-env-conventions"
+			],
+			"atag": [
+				"https://www.w3.org/TR/2015/REC-ATAG20-20150924/Overview.html#gl_a12"
+			],
+			"apple": []
+		}
+	},
+	{
+		"id": "status_indicators",
+		"name": "Status Indicators",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": [],
+			"uaag": [],
+			"atag": ["https://www.w3.org/TR/2015/REC-ATAG20-20150924/#sc_a221"],
+			"apple": [
+				"https://developer.apple.com/design/human-interface-guidelines/feedback#Best-practices",
+				"https://developer.apple.com/design/human-interface-guidelines/loading",
+				"https://developer.apple.com/design/human-interface-guidelines/progress-indicators"
+			]
+		}
+	},
+	{
+		"id": "text_formatting",
+		"name": "Text Formatting",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": [],
+			"uaag": [
+				"https://www.w3.org/TR/2015/NOTE-UAAG20-20151215/#gl-text-config"
+			],
+			"atag": ["https://www.w3.org/TR/2015/REC-ATAG20-20150924/#sc_a222"],
+			"apple": []
+		}
+	},
+	{
+		"id": "text_search",
+		"name": "Text Search",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": [],
+			"uaag": [
+				"https://www.w3.org/TR/2015/NOTE-UAAG20-20151215/#gl-search-text"
+			],
+			"atag": [
+				"https://www.w3.org/TR/2015/REC-ATAG20-20150924/Overview.html#gl_a35"
+			],
+			"apple": [
+				"https://developer.apple.com/design/human-interface-guidelines/searching",
+				"https://developer.apple.com/design/human-interface-guidelines/search-fields",
+				"https://developer.apple.com/design/human-interface-guidelines/combo-boxes#Best-practices"
+			]
+		}
+	},
+	{
+		"id": "alternative_views",
+		"name": "Alternative Views",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": [],
+			"uaag": [
+				"https://www.w3.org/TR/2015/NOTE-UAAG20-20151215/#gl-alternative-views",
+				"https://www.w3.org/TR/2015/NOTE-UAAG20-20151215/#sc_514"
+			],
+			"atag": [
+				"https://www.w3.org/TR/2015/REC-ATAG20-20150924/Overview.html#gl_a37"
+			],
+			"apple": []
+		}
+	},
+	{
+		"id": "documentation",
+		"name": "Documentation",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": [],
+			"uaag": [
+				"https://www.w3.org/TR/2015/NOTE-UAAG20-20151215/#gl-doc-access-features"
+			],
+			"atag": [
+				"https://www.w3.org/TR/2015/REC-ATAG20-20150924/Overview.html#gl_a42",
+				"https://www.w3.org/TR/2015/REC-ATAG20-20150924/Overview.html#gl_b42"
+			],
+			"apple": []
+		}
+	},
+	{
+		"id": "automatically_specified_content",
+		"name": "Automatically Specified Content",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": [],
+			"uaag": [],
+			"atag": [
+				"https://www.w3.org/TR/2015/REC-ATAG20-20150924/Overview.html#gl_b11",
+				"https://www.w3.org/TR/2015/REC-ATAG20-20150924/Overview.html#gl_b24",
+				"https://www.w3.org/TR/2015/REC-ATAG20-20150924/Overview.html#gl_b25"
+			],
+			"apple": []
+		}
+	},
+	{
+		"id": "restructuring_content",
+		"name": "Restructuring Content",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": [],
+			"uaag": [],
+			"atag": [
+				"https://www.w3.org/TR/2015/REC-ATAG20-20150924/Overview.html#gl_b12"
+			],
+			"apple": []
+		}
+	},
+	{
+		"id": "accessible_content_production",
+		"name": "Production of Accessible Content",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": [],
+			"uaag": [],
+			"atag": [
+				"https://www.w3.org/TR/2015/REC-ATAG20-20150924/Overview.html#gl_b21",
+				"https://www.w3.org/TR/2015/REC-ATAG20-20150924/#sc_b231",
+				"https://www.w3.org/TR/2015/REC-ATAG20-20150924/#sc_b233"
+			],
+			"apple": []
+		}
+	},
+	{
+		"id": "guide_content_production",
+		"name": "Guide the Production of Accessible Content",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": [],
+			"uaag": [],
+			"atag": [
+				"https://www.w3.org/TR/2015/REC-ATAG20-20150924/Overview.html#gl_b22",
+				"https://www.w3.org/TR/2015/REC-ATAG20-20150924/Overview.html#gl_b41"
+			],
+			"apple": []
+		}
+	},
+	{
+		"id": "accessibility_checking",
+		"name": "Accessibility Checking",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": [],
+			"uaag": [],
+			"atag": [
+				"https://www.w3.org/TR/2015/REC-ATAG20-20150924/Overview.html#principle_b3"
+			],
+			"apple": []
+		}
+	},
+	{
+		"id": "customizable_graphical_controls",
+		"name": "Customizable Graphical Controls",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": [],
+			"uaag": [
+				"https://www.w3.org/TR/2015/NOTE-UAAG20-20151215/#gl-configure-controls"
+			],
+			"atag": [],
+			"apple": []
+		}
+	},
+	{
+		"id": "accessibility_tools",
+		"name": "accessibility_tools",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": [],
+			"uaag": ["https://www.w3.org/TR/2015/NOTE-UAAG20-20151215/#gl-AT-access"],
+			"atag": [],
+			"apple": [
+				"https://developer.apple.com/design/human-interface-guidelines/accessibility#VoiceOver"
+			]
+		}
+	},
+	{
+		"id": "user_error_reporting",
+		"name": "User Error Reporting",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": [],
+			"uaag": ["https://www.w3.org/TR/2015/NOTE-UAAG20-20151215/#sc_515"],
+			"atag": [],
+			"apple": []
+		}
+	},
+	{
+		"id": "lighting_conditions",
+		"name": "Lighting Conditions",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": [],
+			"uaag": [],
+			"atag": [],
+			"apple": [
+				"https://developer.apple.com/design/human-interface-guidelines/color#Best-practices"
+			]
+		}
+	},
+	{
+		"id": "internationalization",
+		"name": "Internationalization",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": [],
+			"uaag": [],
+			"atag": [],
+			"apple": [
+				"https://developer.apple.com/design/human-interface-guidelines/inclusion#Welcoming-language",
+				"https://developer.apple.com/design/human-interface-guidelines/right-to-left"
+			]
+		}
+	},
+	{
+		"id": "drag_and_drop",
+		"name": "Drag and Drop",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": [],
+			"uaag": [],
+			"atag": [],
+			"apple": [
+				"https://developer.apple.com/design/human-interface-guidelines/drag-and-drop#Best-practices"
+			]
+		}
+	},
+	{
+		"id": "fullscreen_mode",
+		"name": "Fullscreen Mode",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": [],
+			"uaag": [],
+			"atag": [],
+			"apple": [
+				"https://developer.apple.com/design/human-interface-guidelines/going-full-screen#Best-practices"
+			]
+		}
+	},
+	{
+		"id": "haptics",
+		"name": "Haptics",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": [],
+			"uaag": [],
+			"atag": [],
+			"apple": [
+				"https://developer.apple.com/design/human-interface-guidelines/accessibility#Haptics",
+				"https://developer.apple.com/design/human-interface-guidelines/playing-haptics"
+			]
+		}
+	},
+	{
+		"id": "language_and_wording",
+		"name": "Language and Wording",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": ["https://www.w3.org/TR/WCAG22/#readable"],
+			"uaag": [],
+			"atag": [],
+			"apple": [
+				"https://developer.apple.com/design/human-interface-guidelines/inclusion#Welcoming-language",
+				"https://developer.apple.com/design/human-interface-guidelines/inclusion#Welcoming-language",
+				"https://developer.apple.com/design/human-interface-guidelines/menus#Labels"
+			]
+		}
+	},
+	{
+		"id": "data_visualization",
+		"name": "Data Visualization (Charts, Tables, etc.)",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": [],
+			"uaag": [],
+			"atag": [],
+			"apple": [
+				"https://developer.apple.com/design/human-interface-guidelines/charts",
+				"https://developer.apple.com/design/human-interface-guidelines/lists-and-tables#Best-practices"
+			]
+		}
+	},
+	{
+		"id": "picker_menus",
+		"name": "Picker Menus",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": [],
+			"uaag": [],
+			"atag": [],
+			"apple": [
+				"https://developer.apple.com/design/human-interface-guidelines/pickers",
+				"https://developer.apple.com/design/human-interface-guidelines/sliders"
+			]
+		}
+	},
+	{
+		"id": "action_menus",
+		"name": "Action Menus",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": [],
+			"uaag": [],
+			"atag": [],
+			"apple": [
+				"https://developer.apple.com/design/human-interface-guidelines/context-menus#Best-practices",
+				"https://developer.apple.com/design/human-interface-guidelines/context-menus#Best-practices",
+				"https://developer.apple.com/design/human-interface-guidelines/pull-down-buttons#Best-practices",
+				"https://developer.apple.com/design/human-interface-guidelines/pull-down-buttons#Best-practices",
+				"https://developer.apple.com/design/human-interface-guidelines/navigation-bars"
+			]
+		}
+	},
+	{
+		"id": "styling",
+		"name": "styling",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": [],
+			"uaag": [],
+			"atag": [],
+			"apple": [
+				"https://developer.apple.com/design/human-interface-guidelines/accessibility#Buttons-and-controls",
+				"https://developer.apple.com/design/human-interface-guidelines/accessibility#Text-display"
+			]
+		}
+	},
+	{
+		"id": "augmented_reality",
+		"name": "Augmented Reality",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": [],
+			"uaag": [],
+			"atag": [],
+			"apple": [
+				"https://developer.apple.com/design/human-interface-guidelines/augmented-reality"
+			]
+		}
+	},
+	{
+		"id": "machine_learning",
+		"name": "Machine Learning",
+		"description": "",
+		"additionalRequirements": [],
+		"sources": {
+			"wcag": [],
+			"uaag": [],
+			"atag": [],
+			"apple": [
+				"https://developer.apple.com/design/human-interface-guidelines/machine-learning"
+			]
+		}
+	}
+]

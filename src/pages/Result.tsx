@@ -45,6 +45,8 @@ const ResultPage = () => {
 						(a) => a.id === aspect.id
 					);
 
+					// TODO: show aspects with 0 points as separate list
+
 					return specificAspect ? (
 						<div
 							key={aspect.id}
@@ -54,9 +56,16 @@ const ResultPage = () => {
 								{index + 1}.
 							</div>
 
-							<div className="flex flex-col grow">
+							<div className="flex flex-col grow relative">
 								<h2 className="text-xl font-bold">{specificAspect.name}</h2>
 								<p>{specificAspect.description}</p>
+								<ul className="list-disc pl-4 mt-2">
+									{specificAspect.requirements?.map((req, index) => (
+										<li key={index} className="mb-2">
+											{req}
+										</li>
+									))}
+								</ul>
 								<p className="text-primary font-bold mt-2">Quellen:</p>
 								<div className="flex gap-x-4 flex-wrap underline text-primary">
 									{specificAspect.sources.map((source) => (
@@ -72,10 +81,10 @@ const ResultPage = () => {
 								</div>
 							</div>
 
-							<p className="w-32 text-end">
+							{/* <p className="w-32 text-end">
 								Points:{" "}
 								<span className="font-bold">{aspect.relationCount}</span>
-							</p>
+							</p> */}
 						</div>
 					) : (
 						<></>

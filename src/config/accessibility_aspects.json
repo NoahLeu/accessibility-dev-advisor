@@ -3,6 +3,12 @@
 		"id": "alternative_content",
 		"name": "Alternative Content",
 		"description": "You should provide alternative content for any non-text content so that it can be changed into other forms people need, such as large print, braille, speech, symbols or simpler language.",
+		"requirements": [
+			"Your alternative content should be equivalent to the non-text content.",
+			"Your alternative content should be updated when the non-text content is updated.",
+			"Your alternative content should be provided in a way that is easy to find and use.",
+			"Your alternative content should be provided in a way that is easy to understand."
+		],
 		"sources": ["https://www.w3.org/TR/WCAG22/#non-text-content"]
 	},
 	{

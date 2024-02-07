@@ -8,8 +8,8 @@ export const AnalysisContext = React.createContext<{
 	setAnalysis: React.Dispatch<React.SetStateAction<AnalysisState>>;
 	initializeAnalysis: () => void;
 
-	undoLastRelationCount: (aspectIds: string[]) => void;
-	addToRelationCount: (aspectIds: string[], canAddNewAspect?: boolean) => void;
+	subtractFromRelationCount: (aspectIds: string[]) => void;
+	addToRelationCount: (aspectIds: string[]) => void;
 } | null>(null);
 
 const AnalysisProvider: React.FC<{ children: React.ReactNode }> = ({
@@ -37,7 +37,7 @@ const AnalysisProvider: React.FC<{ children: React.ReactNode }> = ({
 		setAnalysis(newAnalysis);
 	};
 
-	const undoLastRelationCount = (aspectIds: string[]) => {
+	const subtractFromRelationCount = (aspectIds: string[]) => {
 		const newAnalysis = { ...analysis };
 
 		aspectIds.forEach((aspectId) => {
@@ -72,7 +72,7 @@ const AnalysisProvider: React.FC<{ children: React.ReactNode }> = ({
 			value={{
 				analysis,
 				setAnalysis,
-				undoLastRelationCount,
+				subtractFromRelationCount,
 				initializeAnalysis,
 				addToRelationCount,
 			}}
