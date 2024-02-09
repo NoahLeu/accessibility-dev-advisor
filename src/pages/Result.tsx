@@ -80,7 +80,7 @@ const ResultPage = () => {
 										<summary className="text-primary font-bold">
 											Sources and more information
 										</summary>
-										<div className="flex-col gap-x-4 text-black1">
+										<div className="flex-col gap-x-4">
 											{specificAspect.sources.wcag?.length > 0 && (
 												<div className="w-full flex justify-start">
 													<p className="font-bold mr-4 w-20 flex flex-wrap">
@@ -102,7 +102,7 @@ const ResultPage = () => {
 												</div>
 											)}
 										</div>
-										<div className="flex-col gap-x-4 text-black1">
+										<div className="flex-col gap-x-4">
 											{specificAspect.sources.atag?.length > 0 && (
 												<div className="w-full flex justify-start">
 													<p className="font-bold mr-4 w-20 flex flex-wrap">
@@ -124,7 +124,7 @@ const ResultPage = () => {
 												</div>
 											)}
 										</div>
-										<div className="flex-col gap-x-4 text-black1">
+										<div className="flex-col gap-x-4">
 											{specificAspect.sources.uaag?.length > 0 && (
 												<div className="w-full flex justify-start">
 													<p className="font-bold mr-4 w-20 flex flex-wrap">
@@ -146,7 +146,7 @@ const ResultPage = () => {
 												</div>
 											)}
 										</div>
-										<div className="flex-col gap-x-4 text-black1">
+										<div className="flex-col gap-x-4">
 											{specificAspect.sources.apple?.length > 0 && (
 												<div className="w-full flex justify-start">
 													<p className="font-bold mr-4 w-20 flex flex-wrap">
@@ -168,6 +168,11 @@ const ResultPage = () => {
 												</div>
 											)}
 										</div>
+										<div className="flex-col gap-x-4">
+											{specificAspect.sources.custom && (
+												<p>{specificAspect.sources.custom}</p>
+											)}
+										</div>
 									</details>
 								</div>
 								{/* <p className="w-32 text-end">
@@ -180,7 +185,7 @@ const ResultPage = () => {
 				})}
 			</div>
 			<Link to="/">
-				<button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-8">
+				<button className="bg-primary hover:bg-primary/70 text-white font-bold py-2 px-4 rounded mt-8">
 					Back to home
 				</button>
 			</Link>
