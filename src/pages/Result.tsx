@@ -17,12 +17,12 @@ const ResultPage = () => {
 
 	return analysis && analysis.finished ? (
 		<div
-			className="bg-gray flex flex-col justify-center items-center w-screen min-h-screen py-32"
+			className="bg-background flex flex-col justify-center items-center w-screen min-h-screen py-32"
 			style={{ overflow: "scroll" }}
 		>
 			<h1 className="text-4xl font-bold text-primary mb-4">Result</h1>
 			<p
-				className="w-full max-w-5xl mb-8
+				className="w-full max-w-3xl mb-8
 			"
 			>
 				You have answered all questions. Here are the results of your analysis.
@@ -41,53 +41,141 @@ const ResultPage = () => {
 			</p>
 			<div className="w-full flex flex-col gap-y-4">
 				{orderAspects(analysis.aspects).map((aspect, index) => {
+					if (aspect.relationCount === 0) return null;
+
 					let specificAspect = accessibilityAspects.find(
 						(a) => a.id === aspect.id
 					);
 
 					// TODO: show aspects with 0 points as separate list
 
-					return specificAspect ? (
-						<div
-							key={aspect.id}
-							className="w-full flex p-4 border-2 rounded-md border-primary max-w-5xl mx-auto"
-						>
-							<div className="rounded-full bg-primary text-white aspect-square h-12 w-12 font-bold flex justify-center items-center mr-4">
-								{index + 1}.
-							</div>
-
-							<div className="flex flex-col grow relative">
-								<h2 className="text-xl font-bold">{specificAspect.name}</h2>
-								<p>{specificAspect.description}</p>
-								<ul className="list-disc pl-4 mt-2">
-									{specificAspect.requirements?.map((req, index) => (
-										<li key={index} className="mb-2">
-											{req}
-										</li>
-									))}
-								</ul>
-								<p className="text-primary font-bold mt-2">Quellen:</p>
-								<div className="flex gap-x-4 flex-wrap underline text-primary">
-									{specificAspect.sources.map((source) => (
-										<Link
-											key={source}
-											to={source}
-											target="_blank"
-											rel="noreferrer"
-										>
-											{source}
-										</Link>
-									))}
+					return (
+						specificAspect && (
+							<div
+								key={aspect.id}
+								className="w-full flex p-4 max-w-3xl mx-auto bg-backgroundLight shadow-md rounded-lg"
+							>
+								<div className="rounded-full bg-primary text-white text-2xl aspect-square h-12 w-12 font-bold flex justify-center items-center mr-4">
+									{index + 1}
 								</div>
-							</div>
 
-							{/* <p className="w-32 text-end">
-								Points:{" "}
-								<span className="font-bold">{aspect.relationCount}</span>
-							</p> */}
-						</div>
-					) : (
-						<></>
+								<div className="flex flex-col grow relative">
+									<h2 className="text-xl font-bold">{specificAspect.name}</h2>
+									<p>{specificAspect.description}</p>
+									{specificAspect.additionalRequirements?.length > 0 && (
+										<>
+											<p className="mt-4 mb-2">Specific requirements:</p>
+											<ul className="list-disc pl-4">
+												{specificAspect.additionalRequirements?.map(
+													(req, index) => (
+														<li key={index} className="mb-2">
+															{req}
+														</li>
+													)
+												)}
+											</ul>
+										</>
+									)}
+									<details className="mt-4">
+										<summary className="text-primary font-bold">
+											Sources and more information
+										</summary>
+										<div className="flex-col gap-x-4 text-black1">
+											{specificAspect.sources.wcag?.length > 0 && (
+												<div className="w-full flex justify-start">
+													<p className="font-bold mr-4 w-20 flex flex-wrap">
+														WCAG:
+													</p>
+													<div className="flex flex-col gap-y-2">
+														{specificAspect.sources.wcag.map((source) => (
+															<Link
+																className="underline text-secondary"
+																key={source}
+																to={source}
+																target="_blank"
+																rel="noreferrer"
+															>
+																{source}
+															</Link>
+														))}
+													</div>
+												</div>
+											)}
+										</div>
+										<div className="flex-col gap-x-4 text-black1">
+											{specificAspect.sources.atag?.length > 0 && (
+												<div className="w-full flex justify-start">
+													<p className="font-bold mr-4 w-20 flex flex-wrap">
+														ATAG:
+													</p>
+													<div className="flex flex-col gap-y-2">
+														{specificAspect.sources.atag.map((source) => (
+															<Link
+																className="underline text-secondary"
+																key={source}
+																to={source}
+																target="_blank"
+																rel="noreferrer"
+															>
+																{source}
+															</Link>
+														))}
+													</div>
+												</div>
+											)}
+										</div>
+										<div className="flex-col gap-x-4 text-black1">
+											{specificAspect.sources.uaag?.length > 0 && (
+												<div className="w-full flex justify-start">
+													<p className="font-bold mr-4 w-20 flex flex-wrap">
+														UAAG:
+													</p>
+													<div className="flex flex-col gap-y-2">
+														{specificAspect.sources.uaag.map((source) => (
+															<Link
+																className="underline text-secondary"
+																key={source}
+																to={source}
+																target="_blank"
+																rel="noreferrer"
+															>
+																{source}
+															</Link>
+														))}
+													</div>
+												</div>
+											)}
+										</div>
+										<div className="flex-col gap-x-4 text-black1">
+											{specificAspect.sources.apple?.length > 0 && (
+												<div className="w-full flex justify-start">
+													<p className="font-bold mr-4 w-20 flex flex-wrap">
+														Apple's guidelines:
+													</p>
+													<div className="flex flex-col gap-y-2">
+														{specificAspect.sources.apple.map((source) => (
+															<Link
+																className="underline text-secondary"
+																key={source}
+																to={source}
+																target="_blank"
+																rel="noreferrer"
+															>
+																{source}
+															</Link>
+														))}
+													</div>
+												</div>
+											)}
+										</div>
+									</details>
+								</div>
+								{/* <p className="w-32 text-end">
+									Points:{" "}
+									<span className="font-bold">{aspect.relationCount}</span>
+								</p> */}
+							</div>
+						)
 					);
 				})}
 			</div>

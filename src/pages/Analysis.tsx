@@ -1,13 +1,33 @@
-import analysisData from "../config/analysis.json";
 import { useContext, useEffect, useState } from "react";
-
-// import analysisTemplate from "../config/analysis.json";
-import analysisTemplate from "../config/analysisV2.json";
+import analysisTemplate from "../config/analysis.json";
 import { AnalysisContext } from "../context/analysisContext";
 import { useNavigate } from "react-router-dom";
 
+const getAnalysisLength = () => {
+	let length = 0;
+	analysisTemplate.forEach((category) => {
+		length += category.questions.length;
+	});
+	return length;
+};
+
+const getCurrentStepOfTotal = (
+	activeQuestion: number,
+	activeCategory: number
+) => {
+	let currentStep = 0;
+	for (let i = 0; i < activeCategory; i++) {
+		currentStep += analysisTemplate[i].questions.length;
+	}
+	currentStep += activeQuestion + 1;
+	return currentStep;
+};
+
 const Analysis = () => {
+	const [activeCategory, setActiveCategory] = useState(0);
 	const [activeQuestion, setActiveQuestion] = useState(0);
+	const [done, setDone] = useState(false);
+
 	const [currentAnalysisTemplate, setCurrentAnalysisTemplate] =
 		useState(analysisTemplate);
 	const [answersGiven, setAnswersGiven] = useState<number[]>([]);
@@ -22,59 +42,93 @@ const Analysis = () => {
 	} = useContext(AnalysisContext) || {};
 
 	const handleNextStep = () => {
-		setActiveQuestion(activeQuestion + 1);
-	};
-
-	const handlePreviousStep = () => {
-		// TODO: undo relation count and restore deleted questions
-		if (activeQuestion === 0) {
+		if (
+			activeQuestion ===
+				currentAnalysisTemplate[activeCategory].questions.length - 1 &&
+			activeCategory === currentAnalysisTemplate.length - 1
+		) {
+			setDone(true);
 			return;
 		}
 
-		if (subtractFromRelationCount !== undefined) {
-			subtractFromRelationCount(
-				currentAnalysisTemplate[activeQuestion - 1].answers[
-					answersGiven[answersGiven.length - 1]
-				].relatedAspects
-			);
-
-			setAnswersGiven(answersGiven.slice(0, answersGiven.length - 1));
+		if (
+			activeQuestion <
+			currentAnalysisTemplate[activeCategory].questions.length - 1
+		) {
+			setActiveQuestion(activeQuestion + 1);
+			return;
 		}
 
-		// restore deleted questions
-		// TODO
-
-		setActiveQuestion(activeQuestion - 1);
+		if (
+			activeQuestion ===
+				currentAnalysisTemplate[activeCategory].questions.length - 1 &&
+			activeCategory < currentAnalysisTemplate.length - 1
+		) {
+			setActiveQuestion(0);
+			setActiveCategory(activeCategory + 1);
+			return;
+		}
 	};
+
+	// const handlePreviousStep = () => {
+	// 	// TODO: undo relation count and restore deleted questions
+	// 	if (activeQuestion === 0) {
+	// 		return;
+	// 	}
+
+	// 	if (subtractFromRelationCount !== undefined) {
+	// 		subtractFromRelationCount(
+	// 			currentAnalysisTemplate[activeQuestion - 1].answers[
+	// 				answersGiven[answersGiven.length - 1]
+	// 			].relatedAspects
+	// 		);
+
+	// 		setAnswersGiven(answersGiven.slice(0, answersGiven.length - 1));
+	// 	}
+
+	// 	// restore deleted questions
+	// 	// TODO
+
+	// 	setActiveQuestion(activeQuestion - 1);
+	// };
 
 	const handleSelectAnswer = (index: number) => {
 		setAnswersGiven([...answersGiven, index]);
 		if (
-			currentAnalysisTemplate[activeQuestion].answers[index].relatedAspects !==
-				undefined &&
+			currentAnalysisTemplate[activeCategory].questions[activeQuestion].answers[
+				index
+			].relatedAspects !== undefined &&
 			addToRelationCount !== undefined
 		) {
 			addToRelationCount(
-				currentAnalysisTemplate[activeQuestion].answers[index].relatedAspects
+				currentAnalysisTemplate[activeCategory].questions[activeQuestion]
+					.answers[index].relatedAspects
 			);
 		}
 
-		if (
-			currentAnalysisTemplate[activeQuestion].answers[index]
-				.deletesQuestions !== undefined
-		) {
-			const questionsToDelete =
-				currentAnalysisTemplate[activeQuestion].answers[index].deletesQuestions;
+		// if (
+		// 	currentAnalysisTemplate[activeCategory].questions[activeQuestion].answers[
+		// 		index
+		// 	].deletesQuestions !== undefined
+		// ) {
+		// 	const questionsToDelete =
+		// 		currentAnalysisTemplate[activeQuestion].answers[index].deletesQuestions;
 
-			const newTemplate = currentAnalysisTemplate.filter((question) => {
-				return !questionsToDelete.includes(question.id);
-			});
+		// 	const newTemplate = currentAnalysisTemplate.filter((question) => {
+		// 		return !questionsToDelete.includes(question.id);
+		// 	});
 
-			setCurrentAnalysisTemplate(newTemplate);
-		}
+		// 	setCurrentAnalysisTemplate(newTemplate);
+		// }
 
 		handleNextStep();
 	};
+
+	const analysisLength = getAnalysisLength();
+	const currentAnalysisStep = getCurrentStepOfTotal(
+		activeQuestion,
+		activeCategory
+	);
 
 	const finishAnalysis = () => {
 		if (setAnalysis === undefined || analysis === undefined) {
@@ -95,27 +149,26 @@ const Analysis = () => {
 	}, [initializeAnalysis, analysis?.started]);
 
 	return (
-		<div className="bg-gray flex flex-col justify-center items-center w-screen h-screen">
+		<div className="bg-background flex flex-col justify-center items-center w-screen h-screen">
 			<div className="flex flex-col w-full max-w-96 mx-auto mb-10">
-				{/* <p>
-					You are{" "}
-					{Math.round(
-						((activeQuestion + 1) / (currentAnalysisTemplate.length + 1)) * 100
-					)}{" "}
-					% done
-				</p> */}
 				<progress
+					className="w-full rounded-full bg-backgroundLight text-primary"
+					value={done ? analysisLength + 1 : currentAnalysisStep}
+					max={analysisLength + 1}
+				></progress>
+
+				{/* <progress
 					className="w-full rounded-full bg-white"
 					value={
-						activeQuestion < currentAnalysisTemplate.length
+						activeQuestion < currentAnalysisTemplate.length - 1
 							? activeQuestion + 1
 							: currentAnalysisTemplate.length + 1
 					}
 					max={currentAnalysisTemplate.length + 1}
-				></progress>
+				></progress> */}
 			</div>
-			{activeQuestion === currentAnalysisTemplate.length ? (
-				<div className="flex flex-col w-96 mt-10 gap-y-6">
+			{done ? (
+				<div className="flex flex-col items-center justify-center p-10 rounded-lg bg-backgroundLight w-96 mt-10 gap-y-6">
 					<p>
 						You have finished the analysis. Click the button below to see the
 						result. You will be presented with a list of accessibility
@@ -125,44 +178,44 @@ const Analysis = () => {
 					</p>
 					<button
 						onClick={() => finishAnalysis()}
-						className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-4 rounded w-full"
+						className="bg-primary hover:bg-primary/70 text-white font-bold py-4 px-4 rounded w-full"
 					>
 						Calculate result
 					</button>
 				</div>
 			) : (
-				<>
-					<h1 className="text-3xl font-bold">
-						{/* {analysisData.categories[activeCategory].name} */}
-						kategorie name
+				<div className="w-fit flex flex-col items-center justify-center p-10 rounded-lg bg-backgroundLight">
+					<h1 className="text-4xl font-bold mb-2">
+						{currentAnalysisTemplate[activeCategory].categoryName}
 					</h1>
 					<h2 className="text-lg font-bold">
-						{currentAnalysisTemplate[activeQuestion].question}
+						{
+							currentAnalysisTemplate[activeCategory].questions[activeQuestion]
+								.question
+						}
 					</h2>
 					<div className="flex flex-col max-w-96 w-full mt-10 gap-y-6">
 						{/* menu showing the selected questions and its possible answers */}
-						{currentAnalysisTemplate[activeQuestion].answers.map(
-							(step, index) => (
-								<button
-									key={index}
-									onClick={() => handleSelectAnswer(index)}
-									className="bg-blue-500 hover:bg-blue-700 text-white font-bold text-lg py-4 px-4 rounded w-full"
-								>
-									{step.answer}
-								</button>
-							)
-						)}
+						{currentAnalysisTemplate[activeCategory].questions[
+							activeQuestion
+						].answers.map((step, index) => (
+							<button
+								key={index}
+								onClick={() => handleSelectAnswer(index)}
+								className="bg-primary hover:bg-primary/70 text-white font-bold text-lg py-4 px-4 rounded w-full"
+							>
+								{step.answerText}
+							</button>
+						))}
 					</div>
-				</>
+				</div>
 			)}
-			<div className="flex gap-x-10 mt-32">
+			{/* <div className="flex gap-x-10 mt-32">
 				{activeQuestion > 0 && (
-					<button onClick={handlePreviousStep}>Previous Step</button>
+					// <button onClick={handlePreviousStep}>Previous Step</button>
+					<> </>
 				)}
-				{/* {activeQuestion < currentAnalysisTemplate.length && (
-					<button onClick={handleNextStep}>Next Step</button>
-				)} */}
-			</div>
+			</div> */}
 		</div>
 	);
 };

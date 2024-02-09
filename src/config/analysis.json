@@ -159,7 +159,14 @@
 				"answers": [
 					{
 						"answerText": "Yes",
-						"relatedAspects": []
+						"relatedAspects": [
+							"alternative_content",
+							"alternative_views",
+							"data_visualization",
+							"contrast_and_color",
+							"styling",
+							"text"
+						]
 					},
 					{
 						"answerText": "No",
@@ -472,6 +479,24 @@
 					{
 						"answerText": "Yes",
 						"relatedAspects": ["battery_consumption"]
+					},
+					{
+						"answerText": "No",
+						"relatedAspects": []
+					}
+				]
+			}
+		]
+	},
+	{
+		"categoryName": "Legal Considerations",
+		"questions": [
+			{
+				"question": "Is your app required to comply with any accessibility guidelines or regulations?",
+				"answers": [
+					{
+						"answerText": "Yes",
+						"relatedAspects": ["conventions", "compatibility"]
 					},
 					{
 						"answerText": "No",

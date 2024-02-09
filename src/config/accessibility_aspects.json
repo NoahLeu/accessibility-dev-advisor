@@ -484,7 +484,7 @@
 	},
 	{
 		"id": "authentication_session_management",
-		"name": "authentication and session management",
+		"name": "Authentication and Session Management",
 		"description": "Create an understandable and accessible authentication and session management process.",
 		"additionalRequirements": [
 			"prevent overuse of authentication tests (e.g. CAPTCHA, password entry)",
@@ -721,7 +721,7 @@
 	},
 	{
 		"id": "accessibility_tools",
-		"name": "accessibility_tools",
+		"name": "Accessibility Tools",
 		"description": "Support the use of accessibility tools, such as screen readers, magnifiers, and voice control.",
 		"additionalRequirements": [
 			"make the app programmatically determinable",
@@ -900,7 +900,7 @@
 	},
 	{
 		"id": "styling",
-		"name": "styling",
+		"name": "Styling and Appearance",
 		"description": "Create a consistent style by using visual hierarchy, color, typography, and more. Keept the interface simple and understandable.",
 		"additionalRequirements": [],
 		"sources": {
