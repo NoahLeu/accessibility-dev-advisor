@@ -1,149 +1,484 @@
-{
-	"categories": [
-		{
-			"name": "App Functionalities to be considered",
-			"steps": [
-				{
-					"question": "Does the app allow the user to type in text?",
-					"answers": [
-						{
-							"answer": "Yes",
-							"relatedAspects": [
-								"alternative_content",
-								"time_based_media",
-								"speech_output",
-								"viewport_orientation"
-							]
-						},
-						{
-							"answer": "No"
-						}
-					]
-				},
-				{
-					"question": "Does the app have a search bar?",
-					"answers": [
-						{
-							"answer": "Yes",
-							"relatedAspects": [
-								"alternative_content",
-								"speech_output",
-								"text_personalization"
-							]
-						},
-						{
-							"answer": "No"
-						}
-					]
-				},
-				{
-					"question": "Does the app have user settings?",
-					"answers": [
-						{
-							"answer": "Yes",
-							"relatedAspects": [
-								"alternative_content",
-								"speech_output",
-								"text_personalization"
-							]
-						},
-						{
-							"answer": "No"
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Disabilities to be considered",
-			"steps": [
-				{
-					"question": "Could the user have color blindness?",
-					"answers": [
-						{
-							"answer": "Yes",
-							"relatedAspects": ["highlights", "text_personalization"]
-						},
-						{
-							"answer": "No"
-						}
-					]
-				},
-				{
-					"question": "Could the user have low vision?",
-					"answers": [
-						{
-							"answer": "Yes",
-							"relatedAspects": [
-								"highlights",
-								"text_personalization",
-								"alternative_content",
-								"alternative_views"
-							]
-						},
-						{
-							"answer": "No"
-						}
-					]
-				},
-				{
-					"question": "Could the user have a cognitive impairment?",
-					"answers": [
-						{
-							"answer": "Yes",
-							"relatedAspects": [
-								"text_personalization",
-								"alternative_content",
-								"alternative_views"
-							]
-						},
-						{
-							"answer": "No"
-						}
-					]
-				},
-				{
-					"question": "Could the user have a hearing impairment?",
-					"answers": [
-						{
-							"answer": "Yes",
-							"relatedAspects": [
-								"alternative_views",
-								"speech_output",
-								"text_personalization",
-								"alternative_content"
-							]
-						},
-						{
-							"answer": "No"
-						}
-					]
-				},
-				{
-					"question": "Could the user have a motor impairment (e.g. arthritis, Parkinson's disease, etc.)?",
-					"answers": [
-						{
-							"answer": "Yes",
-							"relatedAspects": ["speech_output", "text_personalization"]
-						},
-						{
-							"answer": "No"
-						}
-					]
-				},
-				{
-					"question": "Could the user have a speech impairment?",
-					"answers": [
-						{
-							"answer": "Yes",
-							"relatedAspects": ["speech_output", "text_personalization"]
-						},
-						{
-							"answer": "No"
-						}
-					]
-				}
-			]
-		}
-	]
-}
+[
+	{
+		"categoryName": "Input and Interaction",
+		"questions": [
+			{
+				"question": "Does your app support user input, such as text, images, or other forms?",
+				"answers": [
+					{
+						"answerText": "Yes",
+						"relatedAspects": [
+							"personalization",
+							"keyboard_usability",
+							"virtual_keyboard",
+							"timed_interactions",
+							"element_interaction",
+							"input_devices",
+							"predictable_behavior",
+							"input_assistance",
+							"automatically_specified_content",
+							"accessible_content_production",
+							"guide_content_production",
+							"text_search",
+							"text_formatting",
+							"accessibility_tools",
+							"user_error_reporting",
+							"language_and_wording",
+							"picker_menus",
+							"action_menus",
+							"user_help",
+							"text",
+							"accessibility_checking"
+						]
+					},
+					{
+						"answerText": "No",
+						"relatedAspects": []
+					}
+				]
+			},
+			{
+				"question": "Does your app utilize drag and drop functionality?",
+				"answers": [
+					{
+						"answerText": "Yes",
+						"relatedAspects": [
+							"adaptable_views",
+							"keyboard_usability",
+							"touch_gestures",
+							"element_interaction",
+							"input_devices",
+							"predictable_behavior",
+							"status_indicators",
+							"restructuring_content",
+							"accessibility_tools",
+							"drag_and_drop",
+							"personalization"
+						]
+					},
+					{
+						"answerText": "No",
+						"relatedAspects": []
+					}
+				]
+			},
+			{
+				"question": "Does your app frequently interact with external input devices like keyboards, controllers, or pens?",
+				"answers": [
+					{
+						"answerText": "Yes",
+						"relatedAspects": [
+							"personalization",
+							"virtual_keyboard",
+							"user_help",
+							"accessibility_tools",
+							"documentation",
+							"status_indicators",
+							"predictable_behavior"
+						]
+					},
+					{
+						"answerText": "No",
+						"relatedAspects": []
+					}
+				]
+			}
+		]
+	},
+	{
+		"categoryName": "Functionality and Features:",
+		"questions": [
+			{
+				"question": "Does your app incorporate authentication (auth) mechanisms?",
+				"answers": [
+					{
+						"answerText": "Yes",
+						"relatedAspects": [
+							"authentication_session_management",
+							"timed_interactions"
+						]
+					},
+					{
+						"answerText": "No",
+						"relatedAspects": []
+					}
+				]
+			},
+			{
+				"question": "Does your app include popups or modal dialogs?",
+				"answers": [
+					{
+						"answerText": "Yes",
+						"relatedAspects": [
+							"hover_focus_modals",
+							"keyboard_usability",
+							"touch_gestures",
+							"virtual_keyboard",
+
+							"element_interaction",
+							"predictable_behavior",
+							"status_indicators",
+							"restructuring_content",
+							"accessibility_tools"
+						]
+					},
+					{
+						"answerText": "No",
+						"relatedAspects": []
+					}
+				]
+			},
+			{
+				"question": "Does your app utilize machine learning algorithms or techniques?",
+				"answers": [
+					{
+						"answerText": "Yes",
+						"relatedAspects": ["machine_learning", "predictable_behavior"]
+					},
+					{
+						"answerText": "No",
+						"relatedAspects": []
+					}
+				]
+			},
+			{
+				"question": "Does your app utilize augmented reality features?",
+				"answers": [
+					{
+						"answerText": "Yes",
+						"relatedAspects": ["augmented_reality"]
+					},
+					{
+						"answerText": "No",
+						"relatedAspects": []
+					}
+				]
+			},
+			{
+				"question": "Does your app include data visualizations, such as charts, graphs or tables?",
+				"answers": [
+					{
+						"answerText": "Yes",
+						"relatedAspects": []
+					},
+					{
+						"answerText": "No",
+						"relatedAspects": []
+					}
+				]
+			},
+			{
+				"question": "Does your app include visual elements like videos and images or audio elements like music or sound effects?",
+				"answers": [
+					{
+						"answerText": "Yes",
+						"relatedAspects": [
+							"alternative_content",
+							"time_based_media",
+							"speech_output",
+							"adaptable_views"
+						]
+					},
+					{
+						"answerText": "No",
+						"relatedAspects": []
+					}
+				]
+			}
+		]
+	},
+	{
+		"categoryName": "Environmental Considerations",
+		"questions": [
+			{
+				"question": "Can environmental factors like humidity, fluids, or sand reach the touchscreen of your application?",
+				"answers": [
+					{
+						"answerText": "Yes",
+						"relatedAspects": [
+							"automatically_specified_content",
+							"input_assistance",
+							"input_devices",
+							"navigation",
+							"virtual_keyboard",
+							"click_targets",
+							"touch_gestures",
+							"adaptable_views",
+							"customizable_graphical_controls",
+							"user_orientation"
+						]
+					},
+					{
+						"answerText": "No",
+						"relatedAspects": []
+					}
+				]
+			},
+			{
+				"question": "Are there specific lighting conditions your app needs to accommodate, such as bright sun or dark rooms?",
+				"answers": [
+					{
+						"answerText": "Yes",
+						"relatedAspects": [
+							"adaptable_views",
+							"alternative_content",
+							"text",
+							"user_orientation",
+							"contrast_and_color",
+							"motion",
+							"styling",
+							"lighting_conditions"
+						]
+					},
+					{
+						"answerText": "No",
+						"relatedAspects": []
+					}
+				]
+			},
+			{
+				"question": "Are users likely to wear gloves or other handwear while using your app?",
+				"answers": [
+					{
+						"answerText": "Yes",
+						"relatedAspects": [
+							"keyboard_usability",
+							"touch_gestures",
+							"picker_menus",
+							"action_menus",
+							"element_interaction",
+							"virtual_keyboard",
+							"customizable_graphical_controls",
+							"click_targets"
+						]
+					},
+					{
+						"answerText": "No",
+						"relatedAspects": []
+					}
+				]
+			},
+			{
+				"question": "Are factors like stress, limited time, or distractions relevant to the usability of your app?",
+				"answers": [
+					{
+						"answerText": "Yes",
+						"relatedAspects": [
+							"interruptions",
+							"touch_gestures",
+							"personalization",
+							"navigation",
+							"click_targets",
+							"status_indicators",
+							"automatically_specified_content",
+							"predictable_behavior",
+							"action_menus"
+						]
+					},
+					{
+						"answerText": "No",
+						"relatedAspects": []
+					}
+				]
+			}
+		]
+	},
+	{
+		"categoryName": "User Diversity",
+		"questions": [
+			{
+				"question": "Do the users of your app frequently change?",
+				"answers": [
+					{
+						"answerText": "Yes",
+						"relatedAspects": [
+							"app_onboarding",
+							"language_and_wording",
+							"personalization"
+						]
+					},
+					{
+						"answerText": "No",
+						"relatedAspects": []
+					}
+				]
+			},
+			{
+				"question": "Can users of different mother languages and cultures use your app?",
+				"answers": [
+					{
+						"answerText": "Yes",
+						"relatedAspects": [
+							"user_help",
+							"contrast_and_color",
+							"internationalization",
+							"user_error_reporting",
+							"language_and_wording"
+						]
+					},
+					{
+						"answerText": "No",
+						"relatedAspects": []
+					}
+				]
+			},
+			{
+				"question": "Are your users generally familiar with technology and accustomed to using apps?",
+				"answers": [
+					{
+						"answerText": "Yes",
+						"relatedAspects": [
+							"user_orientation",
+							"interruptions",
+							"app_onboarding",
+							"user_help",
+							"text_search",
+							"guide_content_production",
+							"styling",
+							"documentation",
+							"language_and_wording",
+							"status_indicators",
+							"input_assistance",
+							"user_error_reporting",
+							"timed_interactions"
+						]
+					},
+					{
+						"answerText": "No",
+						"relatedAspects": []
+					}
+				]
+			},
+			{
+				"question": "Can users with visual impairments such as decreased eyesight use your app effectively?",
+				"answers": [
+					{
+						"answerText": "Yes",
+						"relatedAspects": [
+							"contrast_and_color",
+							"text",
+							"input_devices",
+							"documentation",
+							"compatibility",
+							"keyboard_usability",
+							"navigation",
+							"element_interaction",
+							"touch_gestures",
+							"adaptable_views",
+							"accessibility_tools",
+							"alternative_content",
+							"haptics",
+							"alternative_views",
+							"user_error_reporting"
+						]
+					},
+					{
+						"answerText": "No",
+						"relatedAspects": []
+					}
+				]
+			},
+			{
+				"question": "Can users with auditory impairments or in loud environments use your app effectively?",
+				"answers": [
+					{
+						"answerText": "Yes",
+						"relatedAspects": [
+							"compatibility",
+							"documentation",
+							"user_error_reporting"
+						]
+					},
+					{
+						"answerText": "No",
+						"relatedAspects": []
+					}
+				]
+			},
+			{
+				"question": "Can users with cognitive impairments use your app effectively?",
+				"answers": [
+					{
+						"answerText": "Yes",
+						"relatedAspects": [
+							"compatibility",
+							"documentation",
+							"user_error_reporting",
+							"status_indicators",
+							"motion",
+							"fullscreen_mode",
+							"styling",
+							"language_and_wording",
+							"alternative_content",
+							"time_based_media",
+							"speech_output"
+						]
+					},
+					{
+						"answerText": "No",
+						"relatedAspects": []
+					}
+				]
+			},
+			{
+				"question": "Can users with motor impairments, such as Parkinson's disease or missing limbs, interact with your app effectively?",
+				"answers": [
+					{
+						"answerText": "Yes",
+						"relatedAspects": [
+							"compatibility",
+							"documentation",
+							"keyboard_usability",
+							"touch_gestures",
+							"virtual_keyboard",
+							"user_error_reporting",
+							"navigation",
+							"element_interaction",
+							"customizable_graphical_controls",
+							"input_devices",
+							"user_orientation",
+							"adaptable_views",
+							"haptics",
+							"motion"
+						]
+					},
+					{
+						"answerText": "No",
+						"relatedAspects": []
+					}
+				]
+			}
+		]
+	},
+	{
+		"categoryName": "Technical Considerations",
+		"questions": [
+			{
+				"question": "Does your app require network availability to function properly?",
+				"answers": [
+					{
+						"answerText": "Yes",
+						"relatedAspects": ["network_conditions"]
+					},
+					{
+						"answerText": "No",
+						"relatedAspects": []
+					}
+				]
+			},
+			{
+				"question": "Is battery life a concern that impacts the functionality of your app?",
+				"answers": [
+					{
+						"answerText": "Yes",
+						"relatedAspects": ["battery_consumption"]
+					},
+					{
+						"answerText": "No",
+						"relatedAspects": []
+					}
+				]
+			}
+		]
+	}
+]
