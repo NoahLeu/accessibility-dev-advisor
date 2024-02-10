@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-type Props = {};
+type Props = {
+	initialShowModal?: boolean;
+};
 
-const InformationModal = (props: Props) => {
-	const [showModal, setShowModal] = useState(false);
+const InformationModal = ({ initialShowModal }: Props) => {
+	const [showModal, setShowModal] = useState(initialShowModal || false);
 
 	return (
 		<>

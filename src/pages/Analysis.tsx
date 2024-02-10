@@ -151,7 +151,7 @@ const Analysis = () => {
 
 	return (
 		<div className="bg-background flex flex-col justify-center items-center w-screen h-screen">
-			<InformationModal />
+			<InformationModal initialShowModal />
 
 			<div className="flex flex-col w-full max-w-96 mx-auto mb-10">
 				<progress
@@ -159,16 +159,6 @@ const Analysis = () => {
 					value={done ? analysisLength + 1 : currentAnalysisStep}
 					max={analysisLength + 1}
 				></progress>
-
-				{/* <progress
-					className="w-full rounded-full bg-white"
-					value={
-						activeQuestion < currentAnalysisTemplate.length - 1
-							? activeQuestion + 1
-							: currentAnalysisTemplate.length + 1
-					}
-					max={currentAnalysisTemplate.length + 1}
-				></progress> */}
 			</div>
 			{done ? (
 				<div className="flex flex-col items-center justify-center p-10 rounded-lg bg-backgroundLight w-96 mt-10 gap-y-6">
