@@ -155,7 +155,7 @@
 				]
 			},
 			{
-				"question": "Does your app include data visualizations, such as charts, graphs or tables?",
+				"question": "Does your app include data visualizations, such as charts, graphs or large tables?",
 				"answers": [
 					{
 						"answerText": "Yes",
@@ -175,7 +175,7 @@
 				]
 			},
 			{
-				"question": "Does your app include visual elements like videos and images or audio elements like music or sound effects?",
+				"question": "Does your app include visual elements like videos and images or audio elements like sound effects or synthesized speech?",
 				"answers": [
 					{
 						"answerText": "Yes",
@@ -198,7 +198,7 @@
 		"categoryName": "Environmental Considerations",
 		"questions": [
 			{
-				"question": "Can environmental factors like humidity, fluids, or sand reach the touchscreen of your application?",
+				"question": "Can environmental factors like humidity, fluids or other disturbances reach the touchscreen of your application?",
 				"answers": [
 					{
 						"answerText": "Yes",
@@ -275,6 +275,7 @@
 							"touch_gestures",
 							"personalization",
 							"navigation",
+							"styling",
 							"click_targets",
 							"status_indicators",
 							"automatically_specified_content",
@@ -311,7 +312,7 @@
 				]
 			},
 			{
-				"question": "Can users of different mother languages and cultures use your app?",
+				"question": "Can users be of different mother languages and cultures?",
 				"answers": [
 					{
 						"answerText": "Yes",
@@ -334,6 +335,10 @@
 				"answers": [
 					{
 						"answerText": "Yes",
+						"relatedAspects": []
+					},
+					{
+						"answerText": "No",
 						"relatedAspects": [
 							"user_orientation",
 							"interruptions",
@@ -349,15 +354,11 @@
 							"user_error_reporting",
 							"timed_interactions"
 						]
-					},
-					{
-						"answerText": "No",
-						"relatedAspects": []
 					}
 				]
 			},
 			{
-				"question": "Can users with visual impairments such as decreased eyesight use your app effectively?",
+				"question": "Can users have visual impairments such as decreased eyesight?",
 				"answers": [
 					{
 						"answerText": "Yes",
@@ -386,7 +387,7 @@
 				]
 			},
 			{
-				"question": "Can users with auditory impairments or in loud environments use your app effectively?",
+				"question": "Can users have auditory impairments or use the app in loud environments?",
 				"answers": [
 					{
 						"answerText": "Yes",
@@ -403,7 +404,7 @@
 				]
 			},
 			{
-				"question": "Can users with cognitive impairments use your app effectively?",
+				"question": "Can users have cognitive impairments?",
 				"answers": [
 					{
 						"answerText": "Yes",
@@ -428,7 +429,7 @@
 				]
 			},
 			{
-				"question": "Can users with motor impairments, such as Parkinson's disease or missing limbs, interact with your app effectively?",
+				"question": "Can users have motor impairments, such as Parkinson's disease?",
 				"answers": [
 					{
 						"answerText": "Yes",

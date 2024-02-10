@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import analysisTemplate from "../config/analysis.json";
 import { AnalysisContext } from "../context/analysisContext";
 import { useNavigate } from "react-router-dom";
+import InformationModal from "../components/InformationModal";
 
 const getAnalysisLength = () => {
 	let length = 0;
@@ -150,6 +151,8 @@ const Analysis = () => {
 
 	return (
 		<div className="bg-background flex flex-col justify-center items-center w-screen h-screen">
+			<InformationModal />
+
 			<div className="flex flex-col w-full max-w-96 mx-auto mb-10">
 				<progress
 					className="w-full rounded-full bg-backgroundLight text-primary"
@@ -172,9 +175,9 @@ const Analysis = () => {
 					<p>
 						You have finished the analysis. Click the button below to see the
 						result. You will be presented with a list of accessibility
-						requirements that are relevant to your project. The list is sorted
-						based on your answers to the questions. The most relevant
-						requirements to implement are at the top.
+						requirements and considerations that are relevant to your project.
+						The list is sorted based on your answers to the questions. The most
+						relevant requirements to consider are at the top.
 					</p>
 					<button
 						onClick={() => finishAnalysis()}

@@ -20,24 +20,22 @@ const ResultPage = () => {
 			className="bg-background flex flex-col justify-center items-center w-screen min-h-screen py-32"
 			style={{ overflow: "scroll" }}
 		>
-			<h1 className="text-4xl font-bold text-primary mb-4">Result</h1>
+			<h1 className="text-4xl font-bold text-primary mb-4 max-w-3xl w-full">
+				Accessibility Analysis Results
+			</h1>
 			<p
 				className="w-full max-w-3xl mb-8
 			"
 			>
-				You have answered all questions. Here are the results of your analysis.
-				The list is sorted based on your answers to the questions. The most
-				relevant requirements to implement are at the top with the highest
-				number of points.
+				<b>Note:</b> This list may not be complete due the software being a
+				prototype.
+				<br />
+				Please note that aspects mentioned at the bottom of the list are not by
+				definition less important. They are however less frequently required to
+				be examined in the context of the answers you have given.
 				<br />
 				<br />
-				This list is not complete and the software is a prototype and proof of
-				concept. The list is based on the WCAG 2.2, ATAG 2.0, UAAG 2.0, and
-				Apple's accessibility guidelines.
-				<br />
-				Please note that aspects mentioned at the bottom of the list are not
-				less important. They are just less relevant to the questions you have
-				answered. The list is not a complete list of all accessibility aspects.
+				See the Information button in the top right corner for more information.
 			</p>
 			<div className="w-full flex flex-col gap-y-4">
 				{orderAspects(analysis.aspects).map((aspect, index) => {
@@ -46,8 +44,6 @@ const ResultPage = () => {
 					let specificAspect = accessibilityAspects.find(
 						(a) => a.id === aspect.id
 					);
-
-					// TODO: show aspects with 0 points as separate list
 
 					return (
 						specificAspect && (

@@ -47,8 +47,8 @@
 	},
 	{
 		"id": "speech_output",
-		"name": "Speech Output",
-		"description": "Allow users to control speech output, such as volume, rate and pitch.",
+		"name": "Synthesized Speech Output",
+		"description": "Allow users to control synthesized speech output, such as volume, rate and pitch.",
 		"additionalRequirements": [],
 		"sources": {
 			"wcag": [],
@@ -114,6 +114,7 @@
 		"additionalRequirements": [
 			"enable text resizing, line height, color and formatting changes",
 			"allow customization highlighting and focus",
+			"allow to turn on accessibility features (e.g. voice control)",
 			"store settings persistently",
 			"allow multiple settings profiles"
 		],
@@ -168,7 +169,7 @@
 		"additionalRequirements": [
 			"ensure easy dismissal of content",
 			"prevent content disappearing while hovering or focusing on it",
-			"do not create a app within an app experience with modals"
+			"do not create an app within an app experience with modals"
 		],
 		"sources": {
 			"wcag": ["https://www.w3.org/TR/WCAG22/#content-on-hover-or-focus"],
@@ -224,7 +225,7 @@
 	{
 		"id": "virtual_keyboard",
 		"name": "Virtual Keyboard",
-		"description": "Ensure the app is usable with a virtual keyboard. This inclused the use of correct keyboard types.",
+		"description": "Ensure the app is usable with a virtual keyboard. This inclused the use of correct keyboard types (e.g. numeric, email).",
 		"additionalRequirements": [],
 		"sources": {
 			"wcag": [],
@@ -288,7 +289,7 @@
 		"name": "Motion",
 		"description": "Consider the impact of motion (e.g. animations) on users.",
 		"additionalRequirements": [
-			"allow at most 3 flashes per second",
+			"allow at most 3 flashes per second to prevent seizures and physical reactions",
 			"do not use motion that is essential for interaction",
 			"allow to disable, pause or reduce motion"
 		],
@@ -518,7 +519,7 @@
 	{
 		"id": "conventions",
 		"name": "Meet Known Conventions",
-		"description": "Follow relevant conventions and standards for your app and its context.",
+		"description": "Follow relevant accessibility conventions and standards for your app and its context.",
 		"additionalRequirements": [],
 		"sources": {
 			"wcag": [],
@@ -679,7 +680,7 @@
 	{
 		"id": "guide_content_production",
 		"name": "Guide the Production of Accessible Content",
-		"description": "Offer the same visibility and guidance for accessible content production as for other content production. If content is not goind to be accessible, require user confirmation.",
+		"description": "Offer the same visibility and guidance for accessible content production as for other content production. If content is not going to be accessible, require user confirmation.",
 		"additionalRequirements": [],
 		"sources": {
 			"wcag": [],
@@ -916,7 +917,7 @@
 	{
 		"id": "augmented_reality",
 		"name": "Augmented Reality",
-		"description": "Ensure the functionality in different environments (e.g. lighting conditions, space). Consider the impact of motion, sound and haptics. Ensure the user's safety",
+		"description": "Ensure the functionality of AR features in different environments (e.g. lighting conditions, space). Consider the impact of motion, sound and haptics. Ensure the user's safety",
 		"additionalRequirements": [],
 		"sources": {
 			"wcag": [],
@@ -957,7 +958,7 @@
 	{
 		"id": "battery_consumption",
 		"name": "Battery Consumption",
-		"description": "Ensure the app does not consume too much battery. Provide feedback to the user about the battery status.",
+		"description": "Ensure the app does not consume too much battery. Provide feedback to the user about the battery status. Consider colors, efficiency, and performance.",
 		"additionalRequirements": [],
 		"sources": {
 			"wcag": [],
