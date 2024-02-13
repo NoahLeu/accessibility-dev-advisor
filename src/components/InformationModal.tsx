@@ -11,14 +11,14 @@ const InformationModal = ({ initialShowModal }: Props) => {
 	return (
 		<>
 			<button
-				className="bg-primary text-white text-2xl font-bold p-2 rounded-full z-50 absolute top-10 right-10 aspect-square h-12 w-12"
+				className="bg-primary text-white text-2xl font-bold p-2 rounded-full z-40 absolute top-10 right-10 aspect-square h-12 w-12"
 				onClick={() => setShowModal(true)}
 			>
 				i
 			</button>
 
 			<div
-				className="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 z-40 items-center justify-center"
+				className="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 z-50 items-center justify-center"
 				style={{ display: showModal ? "flex" : "none" }}
 				onClick={() => setShowModal(false)}
 				aria-hidden={!showModal}
