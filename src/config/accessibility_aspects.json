@@ -314,7 +314,7 @@
 		"additionalRequirements": [
 			"use structured navigation elements (e.g. headings, lists)",
 			"order components logically and consistently",
-			"allow programmaticalle determining navigation structure",
+			"allow programmatically determining navigation structure",
 			"inform assistive technologies about content or layout changes",
 			"show events related to external apps or web content opening"
 		],
@@ -902,7 +902,7 @@
 	{
 		"id": "styling",
 		"name": "Styling and Appearance",
-		"description": "Create a consistent style by using visual hierarchy, color, typography, and more. Keept the interface simple and understandable.",
+		"description": "Create a consistent style by using visual hierarchy, color, typography, and more. Keep the interface simple and understandable.",
 		"additionalRequirements": [],
 		"sources": {
 			"wcag": [],

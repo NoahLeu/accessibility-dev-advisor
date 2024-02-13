@@ -32,10 +32,7 @@ const ResultPage = () => {
 				<br />
 				Please note that aspects mentioned at the bottom of the list are not by
 				definition less important. They are however less frequently required to
-				be examined in the context of the answers you have given.
-				<br />
-				<br />
-				See the Information button in the top right corner for more information.
+				be examined in the context of the answers you have provided.
 			</p>
 			<div className="w-full flex flex-col gap-y-4">
 				{orderAspects(analysis.aspects).map((aspect, index) => {
