@@ -438,7 +438,7 @@
 	{
 		"id": "user_help",
 		"name": "User Help",
-		"description": "Offer accessible help to users. Ensure that it is easy to find and provide relevant and consistentent language and images",
+		"description": "Offer accessible help to users. Ensure that it is easy to find and provide relevant and consistent language and images",
 		"additionalRequirements": [],
 		"sources": {
 			"wcag": ["https://www.w3.org/TR/WCAG22/#consistent-help"],
@@ -543,7 +543,7 @@
 			"ensure readibility of status indicators using assistive technology"
 		],
 		"sources": {
-			"wcag": [],
+			"wcag": ["https://www.w3.org/TR/WCAG22/#status-messages"],
 			"uaag": [],
 			"atag": ["https://www.w3.org/TR/2015/REC-ATAG20-20150924/#sc_a221"],
 			"apple": [
