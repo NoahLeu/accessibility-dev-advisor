@@ -71,28 +71,6 @@ const Analysis = () => {
 		}
 	};
 
-	// const handlePreviousStep = () => {
-	// 	// TODO: undo relation count and restore deleted questions
-	// 	if (activeQuestion === 0) {
-	// 		return;
-	// 	}
-
-	// 	if (subtractFromRelationCount !== undefined) {
-	// 		subtractFromRelationCount(
-	// 			currentAnalysisTemplate[activeQuestion - 1].answers[
-	// 				answersGiven[answersGiven.length - 1]
-	// 			].relatedAspects
-	// 		);
-
-	// 		setAnswersGiven(answersGiven.slice(0, answersGiven.length - 1));
-	// 	}
-
-	// 	// restore deleted questions
-	// 	// TODO
-
-	// 	setActiveQuestion(activeQuestion - 1);
-	// };
-
 	const handleSelectAnswer = (index: number) => {
 		setAnswersGiven([...answersGiven, index]);
 		if (
@@ -106,21 +84,6 @@ const Analysis = () => {
 					.answers[index].relatedAspects
 			);
 		}
-
-		// if (
-		// 	currentAnalysisTemplate[activeCategory].questions[activeQuestion].answers[
-		// 		index
-		// 	].deletesQuestions !== undefined
-		// ) {
-		// 	const questionsToDelete =
-		// 		currentAnalysisTemplate[activeQuestion].answers[index].deletesQuestions;
-
-		// 	const newTemplate = currentAnalysisTemplate.filter((question) => {
-		// 		return !questionsToDelete.includes(question.id);
-		// 	});
-
-		// 	setCurrentAnalysisTemplate(newTemplate);
-		// }
 
 		handleNextStep();
 	};
@@ -203,12 +166,6 @@ const Analysis = () => {
 					</div>
 				</div>
 			)}
-			{/* <div className="flex gap-x-10 mt-32">
-				{activeQuestion > 0 && (
-					// <button onClick={handlePreviousStep}>Previous Step</button>
-					<> </>
-				)}
-			</div> */}
 		</div>
 	);
 };

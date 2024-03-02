@@ -168,10 +168,6 @@ const ResultPage = () => {
 										</div>
 									</details>
 								</div>
-								{/* <p className="w-32 text-end">
-									Points:{" "}
-									<span className="font-bold">{aspect.relationCount}</span>
-								</p> */}
 							</div>
 						)
 					);
